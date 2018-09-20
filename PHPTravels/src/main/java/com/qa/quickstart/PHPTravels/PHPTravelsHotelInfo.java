@@ -42,8 +42,10 @@ public class PHPTravelsHotelInfo {
 		//Navigate to arrive date 
 		
 			action.moveToElement(checkInBox).click().perform();
-			WebElement dateWait = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[8]")));
-			driver.findElement(By.xpath("/html/body/div[8]/div[1]/table/tbody/tr[4]/td[4]")).click();
+			action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.LEFT_CONTROL).sendKeys(Keys.DELETE).perform();
+			action.sendKeys(arrive).sendKeys(Keys.TAB).perform();
+			/*WebElement dateWait = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[8]")));
+			driver.findElement(By.xpath("/html/body/div[8]/div[1]/table/tbody/tr[4]/td[4]")).click();*/
 			
 			
 		//Navigate to leave date

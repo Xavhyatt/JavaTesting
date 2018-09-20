@@ -39,7 +39,7 @@ public class PHPTravelsBookHotelTest {
 		test = report.startTest("PHPTravels Booking a Hotel Test");
 		
 		String dest = "London";
-		String arrive = "19/09/2018";
+		String arrive = "20/09/2018";
 		String leave = "23/09/2018";
 		
 		test.log(LogStatus.INFO, "Browser Launched");

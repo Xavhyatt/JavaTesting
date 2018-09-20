@@ -1,6 +1,6 @@
 package com.qa.quickstart.PHPTravels;
 
-public class Constraints {
+public class Constants {
 	
 	
 	private static final String url1 = "https://www.phptravels.net/";

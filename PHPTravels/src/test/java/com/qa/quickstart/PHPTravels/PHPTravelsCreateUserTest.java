@@ -26,7 +26,7 @@ public class PHPTravelsCreateUserTest {
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Testing\\chromedriver.exe");
 		driver = new ChromeDriver();
-		report = new ExtentReports(Constraints.getReportfilepath()+Constraints.getReportfilename(), true);
+		report = new ExtentReports(Constants.getReportfilepath()+Constants.getReportfilename(), true);
 		driver.manage().window().maximize();
 	}
 	
