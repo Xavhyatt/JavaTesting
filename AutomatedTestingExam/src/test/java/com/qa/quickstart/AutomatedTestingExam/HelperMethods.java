@@ -1,4 +1,4 @@
-package com.qa.quickstart.BingTesting;
+package com.qa.quickstart.AutomatedTestingExam;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class HelperMethods {
+
 	public static String destination1;
 	
 	public static void screenshot(WebDriver driver) {
@@ -21,7 +22,7 @@ public class HelperMethods {
 
 		File source = ts.getScreenshotAs(OutputType.FILE);
 
-		String destination = "C:\\Users\\Admin\\Desktop\\Testing Exam Reports\\"
+		String destination = "C:\\Users\\Admin\\Desktop\\Reports\\"
 				+ "Pass" + dateName + ".png";
 		destination1 = destination;
 	
@@ -38,3 +39,4 @@ public class HelperMethods {
 	}
 
 }
+

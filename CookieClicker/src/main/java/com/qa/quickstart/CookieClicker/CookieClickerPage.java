@@ -40,7 +40,7 @@ public class CookieClickerPage {
 	@FindBy(id = "product8")
 	private WebElement nineUpgrade;
 	
-	@FindBy(id = "upgrade0")
+	@FindBy(xpath = "//*[@id=\"upgrade0\"]")
 	private WebElement storeUpgrade;
 	
 	
@@ -92,11 +92,14 @@ public class CookieClickerPage {
 		}
 	}
 	public void storeUpgrade() {
+		if (storeUpgrade.isDisplayed()) {
 		if (storeUpgrade.getAttribute("class").equals("crate upgrade enabled")) {
 		storeUpgrade.click();
 		}
 	}
+	}
 }
+
 
 	
 	
