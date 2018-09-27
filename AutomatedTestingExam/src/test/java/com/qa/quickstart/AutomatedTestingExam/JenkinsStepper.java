@@ -34,9 +34,7 @@ public class JenkinsStepper {
 	
 	@Before
 	public void setUp() throws IOException {
-		FileInputStream file = new FileInputStream(Constants.getDatafilepath()+Constants.getDatafilename());
-		XSSFWorkbook workbook = new XSSFWorkbook(file);
-		XSSFSheet sheet = workbook.getSheetAt(0);
+	
 		Runner.counter++;
 		report = Runner.report;
 		test = report.startTest("Jenkins Testing" + Runner.counter);
@@ -51,8 +49,7 @@ public class JenkinsStepper {
 		
 		driver.quit();
 		report.endTest(test);
-		report.flush();
-		
+		report.flush();	
 	}
 	
 
