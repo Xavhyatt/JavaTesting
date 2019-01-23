@@ -2,35 +2,35 @@ package com.qa.quickstart.DemoSite;
 
 public class Constants {
 	
-	private static final String url1 = "http://thedemosite.co.uk/index.php";
+	private static final String URL1 = "http://thedemosite.co.uk/index.php";
 	
-	private static final String reportFilepath = "C:\\Users\\Admin\\Desktop\\Reports\\";
+	private static final String REPORTFILEPATH = "C:\\Users\\Admin\\Desktop\\Reports\\";
 	
-	private static final String reportFileName = "DemoSiteReport.html";
+	private static final String REPORTFILENAME = "DemoSiteReport.html";
 	
-	private static final String dataFilepath = "C:\\Users\\Admin\\Desktop\\Input Data\\";
+	private static final String DATAFILEPATH = "C:\\Users\\Admin\\Desktop\\Input Data\\";
 	
-	private static final String dataFileName = "DemoSiteDDT.xlsx";
+	private static final String DATAFILENAME = "DemoSiteDDT.xlsx";
 	
 
 	public static String getUrl1() {
-		return url1;
+		return URL1;
 	}
 
 	public static String getReportfilepath() {
-		return reportFilepath;
+		return REPORTFILEPATH;
 	}
 
 	public static String getReportfilename() {
-		return reportFileName;
+		return REPORTFILENAME;
 	}
 
 	public static String getDatafilepath() {
-		return dataFilepath;
+		return DATAFILEPATH;
 	}
 
 	public static String getDatafilename() {
-		return dataFileName;
+		return DATAFILENAME;
 	}
 	
 
