@@ -40,8 +40,8 @@ public class CookieClickerPage {
 	@FindBy(id = "product8")
 	private WebElement nineUpgrade;
 	
-	@FindBy(xpath = "//*[@id=\"upgrade0\"]")
-	private WebElement storeUpgrade;
+	@FindBy(id = "upgrade0")
+	private WebElement storeUpgrade1;
 	
 	
 	
@@ -63,6 +63,12 @@ public class CookieClickerPage {
 	public void farmUpgrade() {
 		if (farmUpgrade.getAttribute("class").equals("product unlocked enabled")) {
 		farmUpgrade.click();
+		}
+	}
+	
+	public  void mineupgrade() {
+		if(mineUpgrade.getAttribute("class").equals("product unlocked enabled")) {
+			mineUpgrade.click();
 		}
 	}
 	
@@ -91,12 +97,11 @@ public class CookieClickerPage {
 		nineUpgrade.click();
 		}
 	}
-	public void storeUpgrade() {
-		if (storeUpgrade.isDisplayed()) {
-		if (storeUpgrade.getAttribute("class").equals("crate upgrade enabled")) {
-		storeUpgrade.click();
+	public void storeUpgrade1() {
+		if (storeUpgrade1.isEnabled() == true && storeUpgrade1.isDisplayed() == true && storeUpgrade1.getAttribute("class").equals("crate upgrade enabled")) {
+		storeUpgrade1.click();
 		}
-	}
+	
 	}
 }
 

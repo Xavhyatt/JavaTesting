@@ -22,7 +22,7 @@ public class HelperMethods {
 
 		File source = ts.getScreenshotAs(OutputType.FILE);
 
-		String destination = "C:\\Users\\Admin\\Desktop\\Reports\\"
+		String destination = "C:\\Users\\Admin\\Desktop\\Java Testing"
 				+ "Pass" + dateName + ".png";
 		destination1 = destination;
 	

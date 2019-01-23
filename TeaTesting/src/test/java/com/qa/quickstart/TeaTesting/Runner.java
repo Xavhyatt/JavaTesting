@@ -17,7 +17,7 @@ import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "C:\\Users\\Admin\\Desktop\\Eclipse workspace\\TeaTesting\\src\\test\\java\\TeaTesting.feature")
+@CucumberOptions(features = "C:\\Users\\Admin\\Desktop\\Java Testing\\JavaTesting\\TeaTesting\\src\\test\\java\\TeaTesting.feature")
 
 public class Runner {
 	

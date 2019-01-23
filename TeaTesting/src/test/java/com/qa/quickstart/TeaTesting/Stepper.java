@@ -24,7 +24,7 @@ public class Stepper {
 	public ExtentReports report;
 	public ExtentTest test;
 	final private String driverType = "webdriver.chrome.driver";
-	final private String fileLoc = "C:\\Testing\\chromedriver.exe";
+	final private String fileLoc = "C:\\\\Users\\\\Admin\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe";
 	WebDriver driver = null;
 	
 	@Before

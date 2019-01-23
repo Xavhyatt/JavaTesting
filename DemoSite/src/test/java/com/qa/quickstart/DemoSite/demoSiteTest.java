@@ -14,7 +14,7 @@ public class demoSiteTest {
 	WebDriver driver;
 	private String url= "http://thedemosite.co.uk/index.php";
 	final private String driverType = "webdriver.chrome.driver";
-	final private String fileLoc = "C:\\Testing\\chromedriver.exe";
+	final private String fileLoc = "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe";
 
 	
 	@Before

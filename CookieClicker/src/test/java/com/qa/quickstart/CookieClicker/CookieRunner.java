@@ -17,7 +17,7 @@ public class CookieRunner {
 	
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Testing\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -40,13 +40,17 @@ public class CookieRunner {
 			cookieClickerPage.cursorUpgrade();
 			cookieClickerPage.grandmaUpgrade();
 			cookieClickerPage.farmUpgrade();
+			cookieClickerPage.mineupgrade();
 			cookieClickerPage.factoryUpgrade();
 			cookieClickerPage.sixUpgrade();
 			cookieClickerPage.sevenUpgrade();
 			cookieClickerPage.eightUpgrade();
 			cookieClickerPage.nineUpgrade();
-			//cookieClickerPage.storeUpgrade();
+			cookieClickerPage.storeUpgrade1();
 			}
+//			if (i > 50) {
+//				cookieClickerPage.storeUpgrade1();
+//			}
 			i++;
 		}
 	}

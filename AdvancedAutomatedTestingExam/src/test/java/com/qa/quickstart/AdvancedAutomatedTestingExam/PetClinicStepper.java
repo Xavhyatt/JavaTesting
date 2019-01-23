@@ -28,7 +28,7 @@ public class PetClinicStepper {
 	ExtentReports report;
 	ExtentTest test;
 	final private  String driverType = "webdriver.chrome.driver";
-	final private String fileLoc = "C:\\Testing\\chromedriver.exe";
+	final private String fileLoc = "C:\\\\Users\\\\Admin\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe";
 	WebDriver driver = null;
 	private Response response;
 	private ValidatableResponse json;
@@ -149,10 +149,10 @@ public class PetClinicStepper {
 		test.log(LogStatus.INFO, "Attempt to delete animal");
 	}
 
-	@Then("^emails arent sent to deceased annimals$")
+	@Then("^emails arent sent to deceased animals$")
 	public void emails_arent_sent_to_deceased_annimals() throws Throwable {
 		PetClinicSpecificOwner petClinicSpecificOwner = PageFactory.initElements(driver, PetClinicSpecificOwner.class);
-		if (petClinicSpecificOwner.checkPetTable("Lucky") == false & deleteResponse == 204) {
+		if (petClinicSpecificOwner.checkPetTable("Lucky") == false & deleteResponse == 404) {
 			HelperMethods.screenshot(driver);
 			test.log(LogStatus.INFO, "Delete Response: " + deleteResponse);
 	    	test.log(LogStatus.PASS, "Record of Animal Deleted!" + test.addScreenCapture(HelperMethods.destination1));

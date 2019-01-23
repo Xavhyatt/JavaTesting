@@ -42,14 +42,17 @@ public class PHPTravelsHotelInfo {
 		//Navigate to arrive date 
 		
 			action.moveToElement(checkInBox).click().perform();
-			action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.LEFT_CONTROL).sendKeys(Keys.DELETE).perform();
+			action.keyDown(Keys.LEFT_CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.LEFT_CONTROL).sendKeys(Keys.DELETE).perform();
 			action.sendKeys(arrive).sendKeys(Keys.TAB).perform();
 			/*WebElement dateWait = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[8]")));
 			driver.findElement(By.xpath("/html/body/div[8]/div[1]/table/tbody/tr[4]/td[4]")).click();*/
 			
 			
 		//Navigate to leave date
-			driver.findElement(By.xpath("/html/body/div[9]/div[1]/table/tbody/tr[4]/td[6]")).click();;
+			action.moveToElement(checkOutBox).click().perform();
+			//action.keyDown(Keys.LEFT_CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.LEFT_CONTROL).sendKeys(Keys.DELETE).perform();
+			action.sendKeys(leave).sendKeys(Keys.TAB).perform();
+			//driver.findElement(By.xpath("/html/body/div[9]/div[1]/table/tbody/tr[4]/td[6]")).click();;
 			
 			
 		//Number of Adults
@@ -58,14 +61,15 @@ public class PHPTravelsHotelInfo {
 			
 			
 		//Modify Room Req. Submit
-			action.moveToElement(modifyButton).click().perform();
+			checkOutBox.submit();
+			//action.moveToElement(modifyButton).click().perform();
 		
 		//Select Room
 			//make screen scroll down
 			for (int i =0; i<30; i++) {
 			action.sendKeys(Keys.TAB).perform();
 			}
-			driver.findElement(By.xpath("//*[@id=\"ROOMS\"]/div/table/tbody/tr[2]/td/div[2]/div[2]/div/div[3]/div/label/div")).click();
+			driver.findElement(By.xpath("//*[@id=\"ROOMS\"]/div/table/tbody/tr[1]/td/div[2]/div[2]/div/div[3]/div/label/div")).click();
 			action.moveToElement(bookNowButton).click().perform();
 			
 	}

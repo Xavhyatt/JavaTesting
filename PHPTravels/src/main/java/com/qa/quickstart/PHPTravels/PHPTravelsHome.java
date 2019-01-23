@@ -29,7 +29,7 @@ public class PHPTravelsHome {
 	@FindBy ( id = "s2id_autogen8" )
 	private WebElement hotelLocation;
 	
-	@FindBy (xpath = "//*[@id=\"HOTELS\"]/form/div[5]/button")
+	@FindBy (xpath = "//*[@id=\"hotels\"]/form/div[5]/button")
 	private WebElement searchButton;
 	
 	
@@ -82,7 +82,8 @@ public class PHPTravelsHome {
 		action.sendKeys(leave);
 		
 		//Search Submit
-		action.moveToElement(searchButton).click().perform();
+		//action.moveToElement(searchButton).click().perform();
+		hotelLocation.submit();
 		
 	
 	

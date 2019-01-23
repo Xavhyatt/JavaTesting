@@ -3,6 +3,8 @@ package com.qa.quickstart.PHPTravels;
 
 import static org.junit.Assert.*;
 
+import javax.sound.midi.Soundbank;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +26,7 @@ public class PHPTravelsCreateUserTest {
 	
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Testing\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Admin\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		report = new ExtentReports(Constants.getReportfilepath()+Constants.getReportfilename(), true);
 		driver.manage().window().maximize();
@@ -58,10 +60,13 @@ public class PHPTravelsCreateUserTest {
 		PHPTravelsLoginPage loginPage = PageFactory.initElements(driver, PHPTravelsLoginPage.class);
 		loginPage.login();
 		
-		WebElement checkElement = driver.findElement(By.xpath("//*[@id=\"collapse\"]/ul[2]/ul/li[1]/a/i"));
+		WebElement checkElement = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[2]/div[2]/div/div[1]/ul/li[2]/a"));
+		checkElement.click();
 		
+		checkElement = driver.findElement(By.xpath("//*[@id=\"profilefrm\"]/div/div[1]/div[2]/div[1]/div[2]/input"));
+		System.out.println(checkElement.getText());
 		
-		if(checkElement.getText().equals(" Test ")) {
+		if(checkElement.getText().contains("Test")) {
 			//report as pass
 			test.log(LogStatus.PASS, "Login Successful");
 		} else {

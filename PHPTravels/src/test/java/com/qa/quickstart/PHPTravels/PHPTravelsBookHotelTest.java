@@ -20,7 +20,7 @@ public class PHPTravelsBookHotelTest {
 	
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Testing\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Admin\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -39,8 +39,8 @@ public class PHPTravelsBookHotelTest {
 		test = report.startTest("PHPTravels Booking a Hotel Test");
 		
 		String dest = "London";
-		String arrive = "20/09/2018";
-		String leave = "23/09/2018";
+		String arrive = "10/02/2019";
+		String leave = "14/02/2019";
 		
 		test.log(LogStatus.INFO, "Browser Launched");
 		driver.get("https://www.phptravels.net/");

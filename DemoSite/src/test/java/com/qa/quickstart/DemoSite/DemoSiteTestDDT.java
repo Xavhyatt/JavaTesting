@@ -34,7 +34,7 @@ import com.relevantcodes.extentreports.LogStatus;
 		
 		@Before
 		public void setup() {
-			System.setProperty("webdriver.chrome.driver", "C:\\Testing\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 			report = new ExtentReports(Constants.getReportfilepath()+Constants.getReportfilename(), true);
 			ExcelUtils.setExcelFile(Constants.getDatafilepath() + Constants.getDatafilename(),0);

@@ -15,7 +15,7 @@ public class sel1 {
 	WebDriver driver;
 	private String url = "https://www.google.com/";
 	final private String driverType = "webdriver.chrome.driver";
-	final private String fileLoc = "C:\\Testing\\chromedriver.exe";
+	final private String fileLoc = "C:\\\\Users\\\\Admin\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe";
 
 	
 	@Before

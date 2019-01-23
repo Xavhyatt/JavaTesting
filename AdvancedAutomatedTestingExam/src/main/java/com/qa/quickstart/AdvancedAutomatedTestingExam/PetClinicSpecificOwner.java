@@ -43,6 +43,7 @@ public class PetClinicSpecificOwner {
 	
 	public boolean checkInfoUpdate(String update) throws InterruptedException {
 		Thread.sleep(1000);
+		System.out.println(ownerInfo.getText());
 		if ( ownerInfo.getText().contains(update)) {
 			return true;
 		} else {
