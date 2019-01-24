@@ -122,8 +122,6 @@ public class DemoSiteDDTAdc {
 			driver.quit();
 			}
 			catch(UnhandledAlertException exception){
-				
-				driver.switchTo().alert().getText();
 				test.log(LogStatus.INFO, driver.switchTo().alert().getText());
 				fails ++;
 				test.log(LogStatus.FAIL, "Login Unsuccessful");
