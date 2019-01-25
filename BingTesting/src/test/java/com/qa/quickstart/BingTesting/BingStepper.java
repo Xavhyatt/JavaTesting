@@ -24,7 +24,7 @@ public class BingStepper {
 	ExtentReports report;
 	ExtentTest test;
 	final private  String driverType = "webdriver.chrome.driver";
-	final private String fileLoc = "C:\\Testing\\chromedriver.exe";
+	final private String fileLoc = "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe";
 	WebDriver driver = null;
 	String searchTerm = "";
 	String searchTerm1 ="";
@@ -57,6 +57,7 @@ public class BingStepper {
 
 	@When("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) throws InterruptedException  {
+		
 		BingPage bingPage = PageFactory.initElements(driver, BingPage.class);
 		bingPage.searchFor(arg1);
 		test.log(LogStatus.INFO, "Search term inputted and submitted");
@@ -74,10 +75,10 @@ public class BingStepper {
 		
 		
 		String c_url = driver.getCurrentUrl();
-		for (int i = 0; i< searchTerm.length(); i++) {
+	/*	for (int i = 0; i< searchTerm.length(); i++) {
 			searchTerm1 = searchTerm.replace(" ", "+");
 				
-		}
+		}*/
 		if (c_url.contains(searchTerm1)) {
 			test.log(LogStatus.PASS, "Search Successful");
 			HelperMethods.screenshot(driver);
